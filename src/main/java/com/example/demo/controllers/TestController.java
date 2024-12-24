@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path = "https://wholesome-unity-production.up.railway.app/customer/api/customer")
+@RequestMapping(path = "https://wholesome-unity-production.up.railway.app/api/customer")
 public class TestController {
     private TestService testService;
 
