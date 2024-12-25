@@ -22,22 +22,13 @@ public class DataLoader implements CommandLineRunner {
         this.dataLoadService = dataLoadService;
     }
 
-    @Override
+     @Override
     public void run(String... args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("¿Quieres cargar los datos iniciales en la base de datos? (S/N)");
-        String respuesta = scanner.nextLine().trim().toLowerCase();
-
-        if (respuesta.equals("s")) {
+        {
             dataLoadService.loadCsvData("static/data.csv");
             System.out.println("Datos cargados correctamente.");
-        } else {
-            System.out.println("No se cargaron los datos.");
         }
-
-        scanner.close();
     }
 }
-
 
 
